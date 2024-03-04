@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# Netflix React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## api
+    ### axios : movie DB api를 가져오는 api
+    ### request : movie DB / 영화 종류 별 DB 가져오는 api
+## hooks
+    ### useClickOutside : react-dom 의 useRef를 사용하여 현 위치에 있는 요소를 가져오는 react hook
+    ### useDebound : fetch 시 setTimeout을 주기 위한 react hook
+## Main Page
+    <img width="1425" alt="스크린샷 2024-03-04 오후 3 46 14" src="https://github.com/immyeong/react-netflix/assets/62759873/c693d72f-4928-4377-b57c-43c1d1418211">
 
-## Available Scripts
+    ### nav
+    -logo : 클릭 시 Main Page load
+    -searchBar : 키보드 입력 시 react 라이브러리의 useNavigation을 사용하여 Detail Page/MovieId load
+    
+    ### banner
+    - play btn : 버튼 클릭 시 영상 재생
+    - more info btn : 버튼 클릭 시 Detail Page load
+    
+    ### Contents :
+    - 일치하는 영화 리스트들의 이미지를 화면에 출력
+    - react Swiper 라이브러리를 사용하여 슬라이드 구현
+    - 이미지 클릭 시 MovieModal 실행
 
-In the project directory, you can run:
+## Search Page
+    <img width="1426" alt="스크린샷 2024-03-04 오후 3 47 35" src="https://github.com/immyeong/react-netflix/assets/62759873/38bf644e-0426-4a8b-9856-5fc8b1cea17f">
 
-### `npm start`
+    ### Page Load
+    - useLocation을 사용하여 params에 접근
+    - query.get()함수로 url의 q값을 가져옴
+    - q(movieId) 값에 일치하는 Search Page load
+    - load 된 이미지 클릭 시 useNavigation을 사용하여 Detail Page load
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Detail Page
+    <img width="1425" alt="스크린샷 2024-03-04 오후 3 47 08" src="https://github.com/immyeong/react-netflix/assets/62759873/d878f7e1-aec1-4a36-a839-21b88544dcb3">
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    ### Detail Page
+    - movieData를 fetch하여 화면에 출력

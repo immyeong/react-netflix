@@ -1,0 +1,76 @@
+.banner {
+    color: white;
+    object-fit: contain;
+    height: 448px;
+}
+
+.banner__contents {
+    height: 200px;
+    padding-top: 185px;
+}
+
+.banner__title {
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.banner__btns {
+    display: flex;
+    flex-direction: row;
+}
+
+.banner__btn {
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    padding : 16px 40px;
+    border: none;
+    border-radius: 5px;
+}
+
+.banner__btn.play {
+    background-color: white;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.banner__btn.play:hover {
+    opacity: 0.8;
+}
+
+.banner__btn.info {
+    background-color: grey;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    cursor : pointer;
+}
+
+.banner__btn.info:hover {
+    opacity: 0.8;
+}
+
+.banner__description {
+    width: 45rem;
+    height: 80px;
+    max-width: 400px;
+    font-weight: 500;
+    overflow: hidden;
+    overflow : auto;
+}
+
+.banner__description::-webkit-scrollbar{
+    display:none;
+}
+
+
+.banner__fadeBottom {
+    margin-top: 35px;
+    width: 100%;
+    height: 2rem;
+    background-image: linear-gradient(180deg,
+            transparent,
+            rgba(37, 37, 37, 0.61),
+            #111);
+}

@@ -1,0 +1,41 @@
+.detail__container{
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+.details__title {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.detail__movie-img {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+}
+
+.details__contents {
+    color: white;
+    padding: 20px;
+}
+
+.details__decs {
+    overflow: hidden;
+    overflow: auto;
+}
+
+.movieVideo {
+    display: flex;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.details__video-img {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+}
